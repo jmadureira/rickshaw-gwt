@@ -6,6 +6,7 @@
 	<script src='vendor/d3.layout.min.js' />
 	<!-- <script src='rickshaw.min.js' /> -->
 	<script src="Rickshaw.js" />
+	<script src="Rickshaw.Series.js"/>
 	<script src="Rickshaw.Graph.js" />
 	<script src="Rickshaw.Graph.Renderer.Stack.js" />
 	<script src="Rickshaw.Graph.Renderer.Line.js"/>
