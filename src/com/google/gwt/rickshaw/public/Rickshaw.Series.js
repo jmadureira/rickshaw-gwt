@@ -37,7 +37,6 @@ Rickshaw.Series.prototype.addItem = function(item) {
 		} );
 	} else {
 		// otherwise add a first plot
-		console.log(self.timeBase);
 		item.data.push({ x: self.timeBase, y: 0 });
 	}
 
