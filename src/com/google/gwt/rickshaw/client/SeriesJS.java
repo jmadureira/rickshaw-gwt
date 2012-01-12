@@ -27,7 +27,8 @@ public class SeriesJS extends JsArray<LineJS> {
 	/**
 	 * Returns the line with the given name.
 	 * 
-	 * @param name The name of the line data being retrieved.
+	 * @param name
+	 *            The name of the line data being retrieved.
 	 * @return The specified line or null if none was found.
 	 */
 	public final native LineJS itemByName(String name)/*-{
@@ -36,6 +37,16 @@ public class SeriesJS extends JsArray<LineJS> {
 
 	public final native void load(JavaScriptObject data) /*-{
 		this.load(data);
+	}-*/;
+
+	/**
+	 * Sets the time interval for these series.
+	 * 
+	 * @param time
+	 *            Time time in milliseconds being specified.
+	 */
+	public final native void setTimeInterval(int time) /*-{
+		this.setTimeInterval(time);
 	}-*/;
 
 }

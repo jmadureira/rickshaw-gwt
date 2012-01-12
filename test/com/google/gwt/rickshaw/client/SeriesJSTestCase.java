@@ -58,4 +58,26 @@ public class SeriesJSTestCase extends GWTTestCase {
 		assertEquals(7, line.data().get(2).getY());
 	}
 	
+	public void testSetTimeInterval() {
+		SeriesJS series = SeriesJS.create();
+		assertNotNull(series);
+		series.setTimeInterval(1000);
+		JSONObject map = new JSONObject();
+		map.put("NewSerie", new JSONNumber(5));
+		series.addData(map.getJavaScriptObject());
+		assertEquals(1, series.length());
+		map.put("NewSerie", new JSONNumber(7));
+		series.addData(map.getJavaScriptObject());
+		LineJS line = series.itemByName("NewSerie");
+		assertNotNull(line);
+		// the first element is zero
+		assertEquals(3, line.data().length());
+		assertEquals(0, line.data().get(0).getY());
+		int startTime = line.data().get(0).getX();
+		assertEquals(5, line.data().get(1).getY());
+		assertEquals(startTime + 1, line.data().get(1).getX());
+		assertEquals(7, line.data().get(2).getY());
+		assertEquals(startTime + 2, line.data().get(2).getX());
+	}
+	
 }
