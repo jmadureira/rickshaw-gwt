@@ -1,8 +1,9 @@
 package com.google.gwt.rickshaw.client;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 
-public class SeriesJS extends JavaScriptObject {
+public class SeriesJS extends JsArray<JavaScriptObject> {
 
 	static public final native boolean isDefined() /*-{
 		return $wnd.Rickshaw != undefined && $wnd.Rickshaw.Series != undefined;
@@ -31,15 +32,6 @@ public class SeriesJS extends JavaScriptObject {
 	 */
 	public final native JavaScriptObject itemByName(String name)/*-{
 		return this.itemByName(name);
-	}-*/;
-
-	/**
-	 * Returns the number of series this instance holds.
-	 * 
-	 * @return The length of this series
-	 */
-	public final native int length() /*-{
-		return this.length;
 	}-*/;
 
 }
