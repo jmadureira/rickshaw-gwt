@@ -16,6 +16,14 @@ public class GraphJS extends JavaScriptObject {
 		});
 		return graph;
 	}-*/;
+	
+	static public final native GraphJS create(Element div, SeriesJS series) /*-{
+		var graph = new $wnd.Rickshaw.Graph({
+			element : div,
+			series : series
+		});
+		return graph;
+	}-*/;
 
 	protected GraphJS() {
 	}
@@ -44,4 +52,5 @@ public class GraphJS extends JavaScriptObject {
 	public final native int width() /*-{
 		return this.width;
 	}-*/;
+
 }

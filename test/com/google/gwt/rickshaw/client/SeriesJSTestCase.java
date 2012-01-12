@@ -1,6 +1,7 @@
 package com.google.gwt.rickshaw.client;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.json.client.JSONNumber;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.junit.client.GWTTestCase;
@@ -28,14 +29,33 @@ public class SeriesJSTestCase extends GWTTestCase {
 		series.addData(map.getJavaScriptObject());
 	}
 	
-	public void testAddSerie() {
+	public void testAddDataShouldCreateANewSerie() {
 		SeriesJS series = SeriesJS.create();
 		assertNotNull(series);
 		JSONObject map = new JSONObject();
 		map.put("NewSerie", new JSONNumber(5));
 		series.addData(map.getJavaScriptObject());
 		assertEquals(1, series.length());
-		JavaScriptObject obj = series.itemByName("NewSerie");
+		LineJS obj = series.itemByName("NewSerie");
 		assertNotNull(obj);
 	}
+	
+	public void testAddSeveralDataToTheSameSerie() {
+		SeriesJS series = SeriesJS.create();
+		assertNotNull(series);
+		JSONObject map = new JSONObject();
+		map.put("NewSerie", new JSONNumber(5));
+		series.addData(map.getJavaScriptObject());
+		assertEquals(1, series.length());
+		map.put("NewSerie", new JSONNumber(7));
+		series.addData(map.getJavaScriptObject());
+		LineJS line = series.itemByName("NewSerie");
+		assertNotNull(line);
+		// the first element is zero
+		assertEquals(3, line.data().length());
+		assertEquals(0, line.data().get(0).getY());
+		assertEquals(5, line.data().get(1).getY());
+		assertEquals(7, line.data().get(2).getY());
+	}
+	
 }

@@ -44,6 +44,7 @@ Rickshaw.Graph = function(args) {
 		} );
 
 		this.setRenderer(args.renderer || 'stack');
+		
 		this.discoverRange();
 	}
 

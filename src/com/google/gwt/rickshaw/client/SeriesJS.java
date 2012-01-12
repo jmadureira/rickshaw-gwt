@@ -3,7 +3,7 @@ package com.google.gwt.rickshaw.client;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 
-public class SeriesJS extends JsArray<JavaScriptObject> {
+public class SeriesJS extends JsArray<LineJS> {
 
 	static public final native boolean isDefined() /*-{
 		return $wnd.Rickshaw != undefined && $wnd.Rickshaw.Series != undefined;
@@ -25,13 +25,17 @@ public class SeriesJS extends JsArray<JavaScriptObject> {
 	}-*/;
 
 	/**
-	 * Returns the serie with the given name.
+	 * Returns the line with the given name.
 	 * 
-	 * @param name The name of the serie being retrieved.
-	 * @return The specified serie or null if none was found.
+	 * @param name The name of the line data being retrieved.
+	 * @return The specified line or null if none was found.
 	 */
-	public final native JavaScriptObject itemByName(String name)/*-{
+	public final native LineJS itemByName(String name)/*-{
 		return this.itemByName(name);
+	}-*/;
+
+	public final native void load(JavaScriptObject data) /*-{
+		this.load(data);
 	}-*/;
 
 }
