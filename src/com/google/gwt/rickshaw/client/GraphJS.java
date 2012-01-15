@@ -12,7 +12,7 @@ public class GraphJS extends JavaScriptObject {
 	static public final native GraphJS create(Element div) /*-{
 		var graph = new $wnd.Rickshaw.Graph({
 			element : div,
-			series : new $wnd.Rickshaw.Series([])
+			series : new $wnd.Rickshaw.Series()
 		});
 		return graph;
 	}-*/;
@@ -27,7 +27,7 @@ public class GraphJS extends JavaScriptObject {
 
 	protected GraphJS() {
 	}
-
+	
 	public final native void render() /*-{
 		this.render();
 	}-*/;

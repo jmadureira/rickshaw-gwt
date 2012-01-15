@@ -38,6 +38,7 @@ public class SeriesJSTestCase extends GWTTestCase {
 		assertEquals(1, series.length());
 		LineJS obj = series.itemByName("NewSerie");
 		assertNotNull(obj);
+		assertEquals("NewSerie", obj.name());
 	}
 	
 	public void testAddSeveralDataToTheSameSerie() {
