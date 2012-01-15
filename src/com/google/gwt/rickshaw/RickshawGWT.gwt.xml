@@ -2,6 +2,11 @@
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.6.1//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.6.1/distro-source/core/src/gwt-module.dtd">
 <module>
 	<inherits name='com.google.gwt.json.JSON' />
+	
+	<stylesheet src="css/detail.css"/>
+	<stylesheet src="css/graph.css"/>
+	<stylesheet src="css/legend.css"/>
+	
 	<script src='vendor/d3.min.js' />
 	<script src='vendor/d3.layout.min.js' />
 	<!-- <script src='rickshaw.min.js' /> -->
