@@ -9,28 +9,5 @@
 	
 	<script src='vendor/d3.min.js' />
 	<script src='vendor/d3.layout.min.js' />
-	<!-- <script src='rickshaw.min.js' /> -->
-	<script src="classList_fix.js" />
-	<script src="Rickshaw.js" />
-	<script src="Rickshaw.Series.js"/>
-	<script src="Rickshaw.Graph.js" />
-	<script src="Rickshaw.Graph.Renderer.Stack.js" />
-	<script src="Rickshaw.Graph.Renderer.Line.js"/>
-	<script src="Rickshaw.Graph.Renderer.Bar.js"/>
-	<script src="Rickshaw.Graph.RangeSlider.js"/>
-	<script src="Rickshaw.Graph.HoverDetail.js"/>
-	<script src="Rickshaw.Graph.Annotate.js"/>
-	<script src="Rickshaw.Graph.Legend.js"/>
-	<script src="Rickshaw.Graph.Axis.Time.js"/>
-	<script src="Rickshaw.Graph.Behavior.Series.Toggle.js"/>
-	<script src="Rickshaw.Graph.Behavior.Series.Order.js"/>
-	<script src="Rickshaw.Graph.Behavior.Series.Highlight.js"/>
-	<script src="Rickshaw.Graph.Smoother.js"/>
-	<script src="Rickshaw.Graph.Unstacker.js"/>
-	<script src="Rickshaw.Fixtures.Time.js"/>
-	<script src="Rickshaw.Fixtures.Number.js"/>
-	<script src="Rickshaw.Fixtures.RandomData.js"/>
-	<script src="Rickshaw.Fixtures.Color.js"/>
-	<script src="Rickshaw.Color.Palette.js"/>
-	<script src="Rickshaw.Graph.Axis.Y.js"/>
+	<script src="rickshaw.js" />
 </module>
